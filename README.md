@@ -16,7 +16,7 @@ I will upload a circuit diagram of what I've done, when I can get it finished ne
 [Savic Rolly Giant + Stand Exercise Wheel Dia 27,5 Cm](https://www.amazon.co.uk/gp/product/B002J1NHFI/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
 This is a big wheel, but fils nicely in the end of the cage we have.
 
-[Raspberry Pi 4 Model B – 2GB RAM](https://shop.pimoroni.com/products/raspberry-pi-4?variant=291570874123072GB%20RAM)
+[Raspberry Pi 4 Model B â€“ 2GB RAM](https://shop.pimoroni.com/products/raspberry-pi-4?variant=291570874123072GB%20RAM)
 This is a bit of overkill, but as this was my first Pi projects I wanted to get the best available.
 
 [Hall Effect Proximity Sensor](https://www.amazon.co.uk/gp/product/B07BFMSJZH/ref=ppx_yo_dt_b_asin_title_o05_s00?ie=UTF8&psc=1)
@@ -28,13 +28,13 @@ I used a magnet from an old computer hard drive...much more powerful than the on
 [Display-O-Tron HAT](https://shop.pimoroni.com/products/display-o-tron-hat)
 This was the second screen I tried.  I initially used the [Enviro](https://shop.pimoroni.com/products/enviro?variant=31155658489939) which contains temperature, light and sound sensors but I found that reading the sensors was too slow to run on every ping of the magnet, and the data they retrieved was fairly uninteresting.  The display-o-tron was much better for displaying the info I wanted and includes a number of buttons which can be used to build an on-screen menu which I used to display information about the system, the measurements being recorded, and also a shutdown option.
 
-[Mini Black HAT Hack3r – Fully Assembled](https://shop.pimoroni.com/products/mini-black-hat-hack3r?variant=19448025991Fully%20Assembled)
+[Mini Black HAT Hack3r â€“ Fully Assembled](https://shop.pimoroni.com/products/mini-black-hat-hack3r?variant=19448025991Fully%20Assembled)
 The Display-o-Tron uses the full header but it does expose 10 pins for you to use.  However, the layout I wanted meant that I needed the screen on the end of a cable so I used this HAT to make it easier to put everything together.
 
-[40-pin GPIO Ribbon Cable for Raspberry Pi – Black](https://shop.pimoroni.com/products/gpio-ribbon-cable-for-raspberry-pi-model-a-b-40-pins?variant=1005871341)
+[40-pin GPIO Ribbon Cable for Raspberry Pi â€“ Black](https://shop.pimoroni.com/products/gpio-ribbon-cable-for-raspberry-pi-model-a-b-40-pins?variant=1005871341)
 I used this cable to connect the PI, on the side of the cage, to the Display-o-Tron on the top.
 
-[Aluminium Heatsink Case for Raspberry Pi 4 – Obsidian Black](https://shop.pimoroni.com/products/aluminium-heatsink-case-for-raspberry-pi-4?variant=29430673178707Obsidian%20Black)
+[Aluminium Heatsink Case for Raspberry Pi 4 â€“ Obsidian Black](https://shop.pimoroni.com/products/aluminium-heatsink-case-for-raspberry-pi-4?variant=29430673178707Obsidian%20Black)
 The case just protects everything.  I did have to adjust the plug on the end of the ribbon cable to get it to fit through the case.
 
 [Electronic Fun Kit](https://www.amazon.co.uk/gp/product/B01ERP6WL4/ref=ppx_yo_dt_b_asin_title_o05_s00?ie=UTF8&psc=1)
@@ -50,7 +50,8 @@ I upload the data to ThingSpeak which has a good selection of graphs, widgets av
 There is a smartphone app for ThingSpeak but it only exposes the graphs, not the maps, so I use an app called WebSnap [Android](https://play.google.com/store/apps/details?id=com.web2mine.wg01&hl=en_GB&gl=US) [iPhone](https://apps.apple.com/gb/app/websnap-screenshots-for-devs/id911259165) to display the map in a widget on my phone.
 
 I signed up for a free account here [Thingspeak](https://thingspeak.com/).  This gives you one channel with up to 8 fields you can use to save data. I've configured the fields as follows:
-![Fields](/images/thingspeak_channels.png)
+
+![Fields](https://raw.githubusercontent.com/gavinallen-dev/HamsterTravels/init_repo/images/thingspeak_fields.PNG?raw=true)
 
 1. rotations - the number of rotations in each sprint
 2. distance - the distance in each sprint
@@ -63,8 +64,9 @@ I signed up for a free account here [Thingspeak](https://thingspeak.com/).  This
 
 I've created a number of graphs showing the values of these fields, but the most interesting one for me is the map visualisation I've created from the total distance, showing how far Lily has travelled from home - she has just passed Amsterdam (Hamsterdam ?).
 
-![Map](/images/map.png)
-You can see the latest version of this visualisation [here](https://thingspeak.com/apps/matlab_visualizations/350197)
+![Map](https://raw.githubusercontent.com/gavinallen-dev/HamsterTravels/init_repo/images/map.PNG?raw=true)
+
+You can see the current map [here](https://thingspeak.com/apps/matlab_visualizations/350197)
 
 ## Files ##
 
@@ -80,3 +82,5 @@ This calculates a daily total for the current day from the values in fields 1 an
 
 ### MATLAB Visualizations/map.m ###
 This builds the map by plotting a circle of points in a circle round my home at a distance of the total distance in field 8.  Just fill in the variables at the top with the details of your ThingSpeak channel, and the latitude and longitude of your home.
+
+To add Analysys or Visualisation code to ThingSpeak have a look at the Apps menu.  There are a number of other useful menu items there but not everything can be displayed on a public channel, so I've only used the Visualisation.
