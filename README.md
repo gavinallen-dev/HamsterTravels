@@ -61,7 +61,7 @@ There is a smartphone app for ThingSpeak but it only exposes the graphs, not the
 
 I signed up for a free account here [Thingspeak](https://thingspeak.com/).  This gives you one channel with up to 8 fields you can use to save data. I've configured the fields as follows:
 
-![Fields](https://raw.githubusercontent.com/gavinallen-dev/HamsterTravels/init_repo/images/thingspeak_fields.PNG?raw=true)
+![Fields](https://github.com/gavinallen-dev/HamsterTravels/blob/main/images/thingspeak_fields.PNG?raw=true)
 
 1. rotations - the number of rotations in each sprint
 2. distance - the distance in each sprint
@@ -74,14 +74,14 @@ I signed up for a free account here [Thingspeak](https://thingspeak.com/).  This
 
 I've created a number of graphs showing the values of these fields, but the most interesting one for me is the map visualisation I've created from the total distance, showing how far Lily has travelled from home - she has just passed Amsterdam (Hamsterdam ?).
 
-![Map](https://raw.githubusercontent.com/gavinallen-dev/HamsterTravels/init_repo/images/map.PNG?raw=true)
+![Map](https://github.com/gavinallen-dev/HamsterTravels/blob/main/images/map.PNG?raw=true)
 
 You can see the current map [here](https://thingspeak.com/apps/matlab_visualizations/350197)
 
 ## Files ##
 
 ### pi/collect_data.py ###
-This is the main python program that collects the rotation data, sends it to thingspeak, operares the Display-o-Tron menu, and triggers the system shutdown.  Fill in the pin number where the sensor is attached, the ThigSpeak channek and API key, and the circumference of the hamster wheel, in meters.
+This is the main python program that collects the rotation data, sends it to thingspeak, operares the Display-o-Tron menu, and triggers the system shutdown.  Fill in the pin number where the sensor is attached, the ThigSpeak channel and API key, and the diameter of the hamster wheel, in meters.
 It works by recording sprints of activity in the files in the data folder (the empty folder structure is in this repo), a sprint is a series of magnet pings with no breaks - a 5 second break with no pings ends the previous sprint.  The total distance and number of rotations for a sprint are recorded against the start time.  Every 10 minutes data for all completed sprints is sent to ThingSpeak.
 
 ### pi/startup.sh ###
