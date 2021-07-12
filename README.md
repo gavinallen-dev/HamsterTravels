@@ -1,5 +1,5 @@
 # HamsterTravels
-What does Lily the hamster get up to when we're not watching?
+What do hamsters get up to when we're not watching?
 
 [See the results](https://thingspeak.com/channels/1061276)
 
@@ -72,7 +72,7 @@ I signed up for a free account here [Thingspeak](https://thingspeak.com/).  This
 7. total rotations - the total number of rotations since I started recording
 8. total distance - the total distance since I started recording
 
-I've created a number of graphs showing the values of these fields, but the most interesting one for me is the map visualisation I've created from the total distance, showing how far Lily has travelled from home - she has just passed Amsterdam (Hamsterdam ?).
+I've created a number of graphs showing the values of these fields, but the most interesting one for me is the map visualisation I've created from the total distance - you can see how far your hamster has travelled from home - Lily made it all the way to Amsterdam (Hamsterdam ?).
 
 ![Map](https://github.com/gavinallen-dev/HamsterTravels/blob/main/images/map.PNG?raw=true)
 
